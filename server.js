@@ -11,16 +11,15 @@ app.get('/', (req, res) => {
     res.send('Flights Homepage')
 })
 
-app.get('/flightsindex', (req, res) => {
+app.get('/flights', (req, res) => {
     // res.send()
     console.log('Flight Index')
 })
 
 app.get('/testflight', (req, res) => {
     const firstFlight = {
-    airline: "American",
-    flightNo: 948568,
-    departs: Date,
+        airline: "American",
+        flightNo: 948568,
 
 }
 
@@ -36,6 +35,9 @@ app.get('/testflight', (req, res) => {
 })
 
 
+app.get('*', (req, res) => {
+    res.send('404')
+})
 
 app.listen(PORT, () => {
     console.log(`Listening on PORT ${PORT}...`);

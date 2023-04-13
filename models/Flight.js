@@ -11,11 +11,10 @@ const flightSchema = new mongoose.Schema({
         type: Number,
         minLength: 10,
         maxLength: 9999
-    },
-    // departs: {
-    //     type: Date,
-    // }
-})
+    }
+},
+    { timestamps: true }
+)
 
 const Flight = mongoose.model('Flight', flightSchema)
 
