@@ -1,4 +1,4 @@
-//! Schema
+//* Schema
 
 const mongoose = require('mongoose')
 //TODO: airline (enum to include american, sw, united), flight no (min 10- max 9999), depart date
@@ -12,7 +12,9 @@ const flightSchema = new mongoose.Schema({
         minLength: 10,
         maxLength: 9999
     },
-    lastActiveAt: Date
+    // departs: {
+    //     type: Date,
+    // }
 })
 
 const Flight = mongoose.model('Flight', flightSchema)
