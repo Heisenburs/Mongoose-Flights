@@ -6,6 +6,7 @@ const connectToDb = require('./config/db')
 const Flight = require('./models/Flight')
 const app = express();
 const PORT = 5000;
+// const Index = require('./views/flights/Index')
 
 app.get('/', (req, res) => {
     res.send('Flights Homepage')
@@ -13,7 +14,7 @@ app.get('/', (req, res) => {
 
 app.get('/flights', (req, res) => {
     // res.send()
-    console.log('Flight Index')
+    res.render('Index', {flights: flights})
 })
 
 app.get('/testflight', (req, res) => {
